@@ -10,7 +10,11 @@ int main()
 	window.setFramerateLimit(30);
 
 	sf::Font font;
-	font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf");
+	if(!font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf")){
+		font.loadFromFile("arial.ttf");
+	}
+	
+	// font.loadFromFile("arial.ttf");
 
 	// Текст с обозначением клавиш
 	sf::Text text("F2 - New Game / Esc - Exit / Arrow Keys - Move Tile", font,  20);

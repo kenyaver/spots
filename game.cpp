@@ -3,7 +3,9 @@
 Game::Game()
 {
 	// Подгружаем шрифт для отрисовки элементов
-	font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf");
+	if(!font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf")){
+	font.loadFromFile("arial.ttf");
+	}
 	Init();
 }
 

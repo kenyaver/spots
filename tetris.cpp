@@ -7,13 +7,13 @@ int main()
 {
 	// Создаем окно размером 600 на 600 и частотой обновления 60 кадров в секунду
 	sf::RenderWindow window(sf::VideoMode(600, 600), "15");
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(30);
 
 	sf::Font font;
-	font.loadFromFile("calibri.ttf");
+	font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf");
 
 	// Текст с обозначением клавиш
-	sf::Text text("F2 - New Game / Esc - Exit / Arrow Keys - Move Tile", font, 20);
+	sf::Text text("F2 - New Game / Esc - Exit / Arrow Keys - Move Tile", font,  20);
 	text.setFillColor(sf::Color::Cyan);
 	text.setPosition(5.f, 5.f);
 

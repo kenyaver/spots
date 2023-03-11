@@ -3,7 +3,7 @@
 Game::Game()
 {
 	// Подгружаем шрифт для отрисовки элементов
-	font.loadFromFile("calibri.ttf");
+	font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf");
 	Init();
 }
 

@@ -60,10 +60,10 @@ void Game::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 	// Рисуем рамку игрового поля
 	sf::RectangleShape shape(sf::Vector2f(FIELD_SIZE, FIELD_SIZE));
-	shape.setOutlineThickness(2.f);
-	shape.setOutlineColor(color);
-	shape.setFillColor(sf::Color::Transparent);
-	target.draw(shape, states);
+	// shape.setOutlineThickness(2.f);
+	// shape.setOutlineColor(color);
+	// shape.setFillColor(sf::Color::Transparent);
+	// target.draw(shape, states);
 
 	// Подготавливаем рамку для отрисовки всех плашек
 	shape.setSize(sf::Vector2f(CELL_SIZE - 2, CELL_SIZE - 2));
@@ -95,7 +95,7 @@ void Game::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		if (elements[i] > 0)
 		{
 			// Вычисление позиции плашки для отрисовки
-			sf::Vector2f position(i % SIZE * CELL_SIZE + 10.f, i / SIZE * CELL_SIZE + 10.f);
+			sf::Vector2f position(i % SIZE * CELL_SIZE , i / SIZE * CELL_SIZE );
 			shape.setPosition(position);
 			// Позицию текста подбирал вручную
 			text.setPosition(position.x + 30.f + (elements[i] < 10 ? 15.f : 0.f), position.y + 25.f);

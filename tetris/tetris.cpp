@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-#include <SFML/Graphics.hpp>
 #include "game.h"
 
 int main()
@@ -45,7 +42,7 @@ int main()
 				if (event.key.code == sf::Keyboard::F2)
 				{
 					game.Init();
-					move_counter = 100;
+					move_counter = 150;
 				}
 			}
 		}

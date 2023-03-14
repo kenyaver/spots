@@ -18,13 +18,14 @@ class game{
 protected:
     int elems[size];
     bool solve;
+    int index;
     bool move_elem[size];
     sf::Font font;
 public:
     game();
     void init();
     bool check();
-    int move();
+    int move(Direction dir);
 public:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
